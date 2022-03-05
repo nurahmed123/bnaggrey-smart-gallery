@@ -11,6 +11,7 @@ import Nav from "../Nav";
 import { saveAs } from 'file-saver';
 import "./ImageShop.css"
 
+
 export default function ImageShop(props) {
   const [searchValue, setSearchValue] = useState("")
   const searchValueRef = useRef(searchValue)
@@ -25,6 +26,7 @@ export default function ImageShop(props) {
   Modal.setAppElement('#root');
 
   function checkMediaQuery() {
+    console.log(window.innerWidth)
     if (window.innerWidth <= 460) {
       setImagePerCol(1)
     }
@@ -34,15 +36,10 @@ export default function ImageShop(props) {
     if (window.innerWidth >= 800 && 800 <= window.innerWidth) {
       setImagePerCol(3)
     }
-    
-    
-    
   }
 
-  // Add a listener for when the window resizes
-  window.addEventListener('resize', checkMediaQuery);
-
   function fetchData(query, page = props.page) {
+    checkMediaQuery()
     props.setProgress(35)
     setFetching(true);
     fetchingRef.current = true;
