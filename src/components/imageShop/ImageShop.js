@@ -39,6 +39,7 @@ export default function ImageShop(props) {
   }
 
   function fetchData(query, page = props.page) {
+    window.addEventListener('resize', checkMediaQuery);
     checkMediaQuery()
     props.setProgress(35)
     setFetching(true);
