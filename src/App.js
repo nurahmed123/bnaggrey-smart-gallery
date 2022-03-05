@@ -18,9 +18,7 @@ function App() {
   const [perPage, setPerPage] = useState(6)
   const [searchQuery, setSearchQuery] = useState("programming");
   const pageItems = 10;
-  // const apiKey = process.env.IMAGE_SOURCE_API;
-  const apiKey = "ygY0HOat_SsomrADJTiIPYFZg2Y2ZusVs8uInS7snQk";
-  // const apiKey = "C42vwYR0OCghnPXz9idOxvvS-z4K6SNKzgb9z75jjX0";
+  const apiKey = "C42vwYR0OCghnPXz9idOxvvS-z4K6SNKzgb9z75jjX0";
   useEffect(() => {
     setLoading(true)
     setTimeout(() => {
