@@ -11,7 +11,6 @@ import Nav from "../Nav";
 import { saveAs } from 'file-saver';
 import "./ImageShop.css"
 
-
 export default function ImageShop(props) {
   const [searchValue, setSearchValue] = useState("")
   const searchValueRef = useRef(searchValue)
