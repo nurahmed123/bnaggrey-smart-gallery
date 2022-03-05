@@ -26,7 +26,6 @@ export default function ImageShop(props) {
   Modal.setAppElement('#root');
 
   function checkMediaQuery() {
-    console.log(window.innerWidth)
     if (window.innerWidth <= 460) {
       setImagePerCol(1)
     }
