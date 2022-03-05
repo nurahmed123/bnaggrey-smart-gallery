@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
 import Container from '@mui/material/Container';
-import Button from '@material-ui/core/button'
+import Button from '@mui/material/Button';
 import { debounce } from "lodash"
 import ShopHeader from './ShopHeader';
 import ShopGalleryView from './ShopGalleryView';
@@ -152,7 +152,7 @@ export default function ImageShop(props) {
           </Grid>
         </Modal>
         <ShopHeader title={title} searchValue={searchValue} />
-        <ShopGalleryView photoList={photos} setTitle={setTitle} showPopUpImage={showPopUpImage} imagePerCol = {imagePerCol} imageGap = {imageGap} />
+        <ShopGalleryView setImageGap = {setImageGap} photoList={photos} setTitle={setTitle} showPopUpImage={showPopUpImage} imagePerCol = {imagePerCol} imageGap = {imageGap} />
 
         <div>
           {
